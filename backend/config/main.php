@@ -14,7 +14,7 @@ return [
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
-            'admins' => ['admin'],
+            'admins' => ['admin','Alexander'],
 			'layout'=>'wide',
 			'as backendFIlter' => 'backend\filters\BackendFilter',
         ],
