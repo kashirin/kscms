@@ -6,6 +6,7 @@ $this->title = 'CP';
 ?>
 
             <!-- Single button -->
+            <!--
             <div class="btn-group">
                 <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-bars fa-fw"></i> Меню <span class="caret"></span>
@@ -15,6 +16,7 @@ $this->title = 'CP';
                     <li><a href="#"><i class="fa fa-external-link fa-fw"></i> К разделам</a></li>
                 </ul>
             </div>
+            -->
 
 
 
