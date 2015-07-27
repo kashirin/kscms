@@ -216,7 +216,7 @@ class TreeMenu extends Component
     protected function getSingleItem($config,$node_id = false)
     {
         $res = $config;
-        $res['label_prefix'] = '<i class="fa fa-files-o fa-fw"></i> ';
+        $res['label_prefix'] = '<i class="fa '.$this->getIcon($res).' fa-fw"></i> ';
         $res['label_postfix'] = ' <i class="item-settings fa fa-cog fa-lg fa-fw pull-right"></i>';
         if($node_id)
         {
@@ -234,6 +234,17 @@ class TreeMenu extends Component
             $res['options']['class'] = $color_class;
         }
         return $res;
+    }
+
+    protected function getIcon($res){
+        $result = 'fa-cubes';
+
+        if( strpos($res['url'][0],'article')!==false ){
+            $result = 'fa-files-o';
+        }elseif( strpos($res['url'][0],'structure')!==false ){
+            $result = 'fa-file-text-o';
+        }
+        return $result;
     }
 
 

@@ -34,6 +34,9 @@ class StructureRecord extends ActiveRecord
 	const ITEM_TYPE_ARTICLES = 'articles'; // build-in articles
 	const ITEM_TYPE_URL = 'url'; //arbitrary url for any module access
 
+	const STATUS_IS_ACTIVE = 1;
+    const STATUS_IS_NOT_ACTIVE = 0;
+
     /**
      * @inheritdoc
      */
