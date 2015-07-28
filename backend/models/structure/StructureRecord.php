@@ -92,7 +92,14 @@ class StructureRecord extends ActiveRecord
 			
 			if($insert){
 				// calculate sort prop
-				$command = static::getDb()->createCommand("SELECT MAX(sort) as srt from ".$this->tableName()."")->queryOne();
+
+				if((int)$this->parent_id!=0){
+					$command = static::getDb()->createCommand("SELECT MAX(sort) as srt from ".$this->tableName()." where parent_id = ".$this->parent_id)->queryOne();
+				}else{
+					$command = static::getDb()->createCommand("SELECT MAX(sort) as srt from ".$this->tableName()."")->queryOne();
+				}
+
+				
 				$this->sort = $command['srt'] + 5;
 				// calculate level
 				$this->level = 1;
