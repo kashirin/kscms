@@ -67,7 +67,7 @@ class SiteController extends BaseFrontendController
         $article = $articleModel
                 ->find()
                 ->where(['seourl'=>$seourl, 'active'=>ArticleRecord::STATUS_IS_ACTIVE])
-                ->andWhere('active_from > '.time())
+                ->andWhere('active_from < '.time())
                 ->one();
         if($article){
             return [

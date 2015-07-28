@@ -240,7 +240,7 @@ class TreeMenu extends Component
         $result = 'fa-cubes';
 
         if( strpos($res['url'][0],'article')!==false ){
-            $result = 'fa-files-o';
+            $result = 'fa-list';
         }elseif( strpos($res['url'][0],'structure')!==false ){
             $result = 'fa-file-text-o';
         }
