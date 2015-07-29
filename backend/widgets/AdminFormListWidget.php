@@ -36,6 +36,11 @@ class AdminFormListWidget extends Widget {
 								'attribute' => $field_name,
 								'format' => ['date', 'php:Y-m-d H:i:s']
 					];
+				}elseif($item['type'] == 'date'){
+					$arColumns[] = [
+								'attribute' => $field_name,
+								'format' => ['date', 'php:Y-m-d']
+					];
 				}elseif($item['type'] == 'file'){
 					$arColumns[] = [
 								'label' => $item['label'],

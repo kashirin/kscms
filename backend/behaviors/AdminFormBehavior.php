@@ -57,9 +57,14 @@ class AdminFormBehavior extends Behavior
 	protected function normalizeDate($event){
 		foreach($this->owner->{self::METHOD_DESCRIPTION}() as $field => $item){
 			
-			if($item['type'] == 'datetime' && !in_array($field,['created_at','updated_at'])){
+			if( ( $item['type'] == 'datetime' || $item['type'] == 'date' ) && !in_array($field,['created_at','updated_at'])){
 				if(empty($this->owner->{$field})){
-					$this->owner->{$field} = time();
+					if($item['type'] == 'datetime'){
+						$this->owner->{$field} = time();
+					}else{
+						$this->owner->{$field} = mktime(0, 0, 0, date('m'),date('d'),date('Y'));
+					}
+					
 				}else{
 					$arDate = explode('.',$this->owner->{$field});
 					$this->owner->{$field} = mktime(0, 0, 0, $arDate[1], $arDate[0], $arDate[2]);

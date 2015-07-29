@@ -60,6 +60,17 @@ use backend\behaviors\AdminFormBehavior;
 				
 				}
 
+			}elseif($item['type'] == 'date'){
+				
+				if(!in_array($field_name,['created_at','updated_at'])){
+				
+					echo $form->field($model, $field_name)->widget(\yii\jui\DatePicker::classname(), [
+					'language' => 'ru',
+					'dateFormat' => AdminFormBehavior::DATE_FORMAT,
+					]);
+				
+				}
+
 			}elseif($item['type'] == 'checkbox'){
 				
 				echo $form->field($model, $field_name)->radioList($item['values'], [
