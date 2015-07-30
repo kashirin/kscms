@@ -20,7 +20,7 @@ class GlobalBeforeComponent extends \yii\base\Component{
         
         if( !\Yii::$app->request->cookies->has('screen_width') ){
             
-            \Yii::$app->request->cookies->add(new \yii\web\Cookie([
+            \Yii::$app->response->cookies->add(new \yii\web\Cookie([
                 'name' => 'screen_width',
                 'value' => false,
             ]));
