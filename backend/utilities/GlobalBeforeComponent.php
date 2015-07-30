@@ -8,7 +8,7 @@ class GlobalBeforeComponent extends \yii\base\Component{
         
         
        
-        $this->setDefaultScreenSizeInfo();
+      
         
         
         
@@ -16,18 +16,6 @@ class GlobalBeforeComponent extends \yii\base\Component{
         parent::init();
     }
     
-    protected function setDefaultScreenSizeInfo(){
-        
-        if( !\Yii::$app->request->cookies->has('screen_width') ){
-            var_dump('hr');
-            \Yii::$app->response->cookies->add(new \yii\web\Cookie([
-                'name' => 'screen_width',
-                'value' => false,
-            ]));
-
-            
-        }
-        
-    }
+    
     
 }
