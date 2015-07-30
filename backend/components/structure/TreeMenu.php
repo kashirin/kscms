@@ -62,6 +62,7 @@ class TreeMenu extends Component
 		return $this;
 	}
 
+
     /**
      * @return array list of menu items for each levels
      */
@@ -113,27 +114,27 @@ class TreeMenu extends Component
                     $url = $this->getUrlArray($item);
                     if($item->level == 1){
                         if($item->is_dir){
-                            $itemById[$item->id] = $this->getDirItem(['label'=>$item->label, 'url'=>$url, 'level'=>2, 'color'=>$item->color],$item->id);
+                            $itemById[$item->id] = $this->getDirItem(['label'=>$this->shortLabel($item->label), 'url'=>$url, 'level'=>2, 'color'=>$item->color],$item->id);
 							if(!$this->hasChilds($item->id)){
 								
 								$itemById[$item->id]['items'] = [ $this->getAddNewItem(['label'=>'Добавить','url'=>['structure/create','id'=>$item->id]]) ];
 							
 							}
                         }else{
-                            $itemById[$item->id] = $this->getSingleItem(['label'=>$item->label, 'url'=>$url, 'color'=>$item->color],$item->id);
+                            $itemById[$item->id] = $this->getSingleItem(['label'=>$this->shortLabel($item->label), 'url'=>$url, 'color'=>$item->color],$item->id);
                         }
                         $resArray[] = &$itemById[$item->id];
                     }else{
                         // level > 1, so have a parent with $item->parent_id
                         if($item->is_dir){
-                            $itemById[$item->id] = $this->getDirItem(['label'=>$item->label, 'url'=>$url,'level'=>($item->level+1), 'color'=>$item->color],$item->id);
+                            $itemById[$item->id] = $this->getDirItem(['label'=>$this->shortLabel($item->label), 'url'=>$url,'level'=>($item->level+1), 'color'=>$item->color],$item->id);
 							
 							if(!$this->hasChilds($item->id)){
 								$itemById[$item->id]['items'] = [ $this->getAddNewItem(['label'=>'Добавить','url'=>['structure/create','id'=>$item->id]]) ];
 							}
 
 						}else{
-                            $itemById[$item->id] = $this->getSingleItem(['label'=>$item->label, 'url'=>$url, 'color'=>$item->color],$item->id);
+                            $itemById[$item->id] = $this->getSingleItem(['label'=>$this->shortLabel($item->label), 'url'=>$url, 'color'=>$item->color],$item->id);
                         }
                         // add link to parent
                         if(!$itemById[$item->parent_id]['items']){
@@ -157,6 +158,18 @@ class TreeMenu extends Component
 		
 
         return $resArray;
+    }
+
+    protected function shortLabel($lbl){
+        if(strlen($lbl)>28){
+
+            $lbl = iconv('utf-8', 'windows-1251', $lbl);
+            $lbl = substr($lbl, 0, 14).'...';
+            $lbl = iconv('windows-1251', 'utf-8', $lbl);
+
+
+        }
+        return $lbl;
     }
 
     protected function getHomeItem($config,$node_id = false)
