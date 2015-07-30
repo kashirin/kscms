@@ -18,9 +18,9 @@ class GlobalBeforeComponent extends \yii\base\Component{
     
     protected function setDefaultScreenSizeInfo(){
         
-        if( !Yii::$app->request->cookies->has('screen_width') ){
+        if( !\Yii::$app->request->cookies->has('screen_width') ){
             
-            Yii::$app->request->cookies->add(new \yii\web\Cookie([
+            \Yii::$app->request->cookies->add(new \yii\web\Cookie([
                 'name' => 'screen_width',
                 'value' => false,
             ]));
