@@ -20,9 +20,9 @@ use yii\grid\GridView;
 	<p>
         
 		<?if( $searchModel->getParentParams() ){ ?>
-			<?= Html::a($searchModel->getCaption('add_element'), array_merge(['/'.$controller_name.'/create'],$searchModel->getParentParams()), ['class' => 'btn btn-success']) ?>
+			<?= Html::a('<i class="fa fa-plus-square fa-fw"></i> '.$searchModel->getCaption('add_element'), array_merge(['/'.$controller_name.'/create'],$searchModel->getParentParams()), ['class' => 'btn btn-success']) ?>
 		<?}else{?>
-			<?= Html::a($searchModel->getCaption('add_element'), ['/'.$controller_name.'/create', 'parent_id'=>$parent_id], ['class' => 'btn btn-success']) ?>
+			<?= Html::a('<i class="fa fa-plus-square fa-fw"></i> '.$searchModel->getCaption('add_element'), ['/'.$controller_name.'/create', 'parent_id'=>$parent_id], ['class' => 'btn btn-success']) ?>
 		<?}?>
 
     	
