@@ -10,7 +10,7 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log','GlobalBeforeComponent'],
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
@@ -20,6 +20,9 @@ return [
         ],
     ],
     'components' => [
+        'GlobalBeforeComponent'=>[
+            'class'=>'backend\utilities\GlobalBeforeComponent'
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
