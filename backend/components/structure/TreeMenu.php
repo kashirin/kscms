@@ -161,6 +161,13 @@ class TreeMenu extends Component
     }
 
     protected function shortLabel($lbl){
+
+        if(Yii::$app->request->cookies['screen_width']){
+            if((int)Yii::$app->request->cookies['screen_width']>1400){
+                return $lbl;
+            }
+        }
+
         if(strlen($lbl)>28){
 
             $lbl = iconv('utf-8', 'windows-1251', $lbl);

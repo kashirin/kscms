@@ -1,4 +1,9 @@
 $(function(){
+
+   // set widh of screen for backend
+   document.cookie='screen_width='+screen.width;
+
+
 	$("#left-menu").metisMenu();
     
     
