@@ -162,8 +162,8 @@ class TreeMenu extends Component
 
     protected function shortLabel($lbl){
 
-        if(Yii::$app->request->cookies['screen_width']){
-            if((int)Yii::$app->request->cookies['screen_width']>1400){
+        if(Yii::$app->request->cookies->has('screen_width')){
+            if((int)Yii::$app->request->cookies->getValue('screen_width',false)>1400){
                 return $lbl;
             }
         }
