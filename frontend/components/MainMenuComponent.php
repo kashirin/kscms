@@ -158,6 +158,30 @@ class MainMenuComponent extends Component
         return $result;
     }
 
+    /**
+    * This method for make difference between pages and pages in menu
+    */
+    public function getMenuAsTable(){
+
+        $arUrls = [];
+        foreach ($this->arMenu as $key => $itemFirstLevel) {
+                
+            $itemFirstLevel['parent_url'] = false;
+            $arUrls[$itemFirstLevel['url']] = $itemFirstLevel;
+            unset($arUrls[$itemFirstLevel['url']]['children']);
+
+            if(isset($itemFirstLevel['children'])){
+                foreach ($itemFirstLevel['children'] as $subkey => $itemSecondLevel) {
+                    $itemSecondLevel['parent_url'] = $itemFirstLevel['url'];
+                    $arUrls[$itemSecondLevel['url']] = $itemSecondLevel;
+                }
+            }
+
+        }
+
+        return $arUrls;
+    }
+
     public function getMainMenu(){
         if(!$this->_urlCheckUnique()){
             throw new \Exception('Duplicates in item urls');
