@@ -1,0 +1,16 @@
+.wrap {
+    width: 990px;
+}
+#right{
+	width: 763px;
+}
+
+.items a {
+    width:229px;
+	height:190px;
+	margin-left: 9px;
+    margin-right: 9px;
+}
+.items {
+    padding: 19px 11px;
+}

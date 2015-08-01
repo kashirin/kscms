@@ -114,11 +114,25 @@ class SiteController extends BaseFrontendController
     }
 
     protected function _renderPage($content){
-        return $this->render('index');
+
+        $params = [];
+
+        $params['breadcrumbs'] = Yii::$app->breadcrumbs->getBreadcrumbs($content['model']);
+
+        $params['model'] = $content['model'];
+
+        return $this->render('page',$params);
     }
 
     protected function _renderArticle($content){
-        return $this->render('index');
+
+        $params = [];
+
+        $params['breadcrumbs'] = Yii::$app->breadcrumbs->getBreadcrumbs($content['model']);
+
+        $params['model'] = $content['model'];
+
+        return $this->render('article',$params);
     }
 
     
