@@ -1,5 +1,5 @@
 <?php
-namespace frontend\components\structure;
+namespace frontend\components;
 
 use Yii;
 use yii\base\Component;
@@ -125,6 +125,46 @@ class MainMenuComponent extends Component
         ]
 
     ];
+
+    /**
+    * Method for checking for duplicates in url
+    */
+    protected function _urlCheckUnique(){
+
+        $result = true;
+
+        $arUrls = [];
+        foreach ($this->arMenu as $key => $itemFirstLevel) {
+            if(isset( $arUrls[$itemFirstLevel['url']] )){
+                $result = false;
+                break;
+            }else{
+                $arUrls[$itemFirstLevel['url']] = 1; // mark
+            }
+
+            if(isset($itemFirstLevel['children'])){
+                foreach ($itemFirstLevel['children'] as $subkey => $itemSecondLevel) {
+                    if(isset( $arUrls[$itemSecondLevel['url']] )){
+                        $result = false;
+                        break;
+                    }else{
+                        $arUrls[$itemSecondLevel['url']] = 1; // mark
+                    }
+                }
+            }
+
+        }
+
+        return $result;
+    }
+
+    public function getMainMenu(){
+        if(!$this->_urlCheckUnique()){
+            throw new \Exception('Duplicates in item urls');
+        }
+
+        return $this->arMenu;
+    }
 
 
 }

@@ -30,6 +30,12 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'mainMenu' => [
+            'class' => 'frontend\components\MainMenuComponent'
+        ],
+        'breadcrumbs' => [
+            'class' => 'frontend\components\BreadcrumbsComponent'
+        ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
