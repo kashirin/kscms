@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'CP';
+$this->title = 'KSCMS - Панель администрирования';
 ?>
 
             <!-- Single button -->

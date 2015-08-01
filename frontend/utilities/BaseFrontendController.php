@@ -29,6 +29,8 @@ class BaseFrontendController extends Controller
             }        
         }
 
+        
+
         return true;
     }
 
