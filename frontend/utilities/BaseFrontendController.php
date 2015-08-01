@@ -18,6 +18,10 @@ class BaseFrontendController extends Controller
 
     public function beforeAction($action)
     {
+        if($action->id == self::PAGE_ERROR){
+            $this->layout = 'closed';
+        }
+
         if($action->id == self::PAGE_ERROR || $action->id == self::PAGE_OPEN_SITE){
             return true;
         }
@@ -25,6 +29,7 @@ class BaseFrontendController extends Controller
         if (isset(Yii::$app->params['siteIsClosed']) && Yii::$app->params['siteIsClosed'] == true ) {
             // get session key
             if( !Yii::$app->session->has(self::PAGE_OPEN_SITE) ){
+
                 throw new \yii\web\NotFoundHttpException('Сайт закрыт');
             }        
         }
