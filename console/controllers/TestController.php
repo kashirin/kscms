@@ -2,6 +2,7 @@
 
 namespace console\controllers;
  
+use Yii;
 use yii\console\Controller;
  
 /**
@@ -10,11 +11,14 @@ use yii\console\Controller;
 class TestController extends Controller {
  
     public function actionIndex($name) {
-        echo "cron service runnning ".$name;
-    }
- 
-    public function actionMail($to) {
-        echo "Sending mail to " . $to;
+        
+    	Yii::$app->mailer->compose()
+	     ->setFrom('admin@myoption.ru')
+	     ->setTo($name)
+	     ->setSubject('some subj')
+	     ->setTextBody('Plain text content')
+	     ->send();
+
     }
  
 }
