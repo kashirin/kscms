@@ -7,6 +7,7 @@ return [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
+            'useFileTransport'=>'false'
         ],
     ],
 ];
