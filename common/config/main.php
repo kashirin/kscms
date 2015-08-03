@@ -8,17 +8,15 @@ return [
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'useFileTransport'=>false,
-             /*'transport' => [
+             'transport' => [
                                 'class' => 'Swift_SmtpTransport',
-                                'host' => 'ssl://smtp.gmail.com',
-                                'username' => 'kasser2005@gmail.com',
-                                'password' => '0xmpfwtq',
-                                'port' => '587',
+                                'host' => 'smtp.mastermail.ru',
+                                'username' => 'admin@myoption.ru',
+                                'password' => 'x73ds871',
+                                'port' => '25',
                                 'encryption' => 'tls',
-                                ],*/
-                'transport' => [
-                    'class' => 'Swift_MailTransport'
-                ]
+                                ],
+                
         ],
     ],
 ];
