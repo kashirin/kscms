@@ -13,8 +13,8 @@ return [
                                 'host' => 'smtp.masterhost.ru',
                                 'username' => 'admin@myoption.ru',
                                 'password' => 'x73ds871',
-                                'port' => '465',
-                                'encryption' => 'tls',
+                                'port' => '25',
+                               // 'encryption' => 'tls',
                                 ],
                 
         ],
