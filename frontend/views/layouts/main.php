@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -8,6 +9,7 @@ use frontend\widgets\Alert;
 
 use backend\models\snippet\SnippetRecord;
 use frontend\widgets\snippet\SnippetWidget;
+use frontend\widgets\MainMenuWidget;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -38,6 +40,7 @@ SnippetWidget::widget([
 </head>
 <body>
     <?php $this->beginBody() ?>
+
     <div class="wrap">
         <div id="left">
             <div class="header">
@@ -118,6 +121,7 @@ SnippetWidget::widget([
             </div>
         </div>
         <div id="right">
+
             <div class="header">
                 <form id="search_form" method="post">
                     <div><input type="text" id="search_text" name="search" placeholder="Поиск по сайту"></div>
@@ -126,26 +130,15 @@ SnippetWidget::widget([
             </div>
             
             <div class="clear"></div>
+            <?= Alert::widget() ?>
             <div id="heder_right">
                 <div class="clear" style="height:25px;"></div>
-                <ul id="header_menu">
-                        <li><a href="#"><span>Теория</span></a>
-                            <ul>
-                                <li><a href="#"><span>Базовые знания</span></a>
-                                <li><a href="#"><span>Обучение</span></a>
-                                <li><a href="#"><span>Полезное новичкам</span></a>
-                            </ul>
-                        </li>
-                        <li><a href="#"><span>Торговля</span></a>
-                        <ul>
-                                <li><a href="#"><span>Базовые знания</span></a>
-                                <li><a href="#"><span>Обучение</span></a>
-                                <li><a href="#"><span>Полезное новичкам</span></a>
-                            </ul>
-                        </li>
-                        <li><a href="#"><span>Брокеры</span></a></li>
-                        <li><a href="#"><span>Инвестиции</span></a></li>
-                </ul>
+                <!--menu-->
+                <?=MainMenuWidget::widget([
+                    'items' => Yii::$app->mainMenu->getMainMenu()
+                ])?>
+                <!-- menu end -->
+
             </div>  
             <div class="clear"></div>
             <div id="banner">
@@ -160,20 +153,21 @@ SnippetWidget::widget([
             <div id="footer">
                 <div id="footer_menu_body">
                     <ul id="footer_menu">
-                        <li><a href="#">Теория</a></li>
-                        <li><a href="#">Торговля</a></li>
-                        <li><a href="#">Брокеры</a></li>
-                        <li><a href="#">Инвестиции</a></li>
+                        <li><a href="<?=Url::to(['/contacts'])?>">Контакты</a></li>
+                        <li><a href="<?=Url::to(['/about'])?>">О сайте</a></li>
+                        <li><a href="<?=Url::to(['/all'])?>">Все статьи</a></li>
                     </ul>
                 </div>
+                <noindex>
                 <div id="social">
-                    <a href="#" target="_blank"></a>
-                    <a href="#" target="_blank" id="social2"></a>
-                    <a href="#" target="_blank" id="social3"></a>
-                    <a href="#" target="_blank" id="social4"></a>
-                    <a href="#" target="_blank" id="social5"></a>
-                    <a href="#" target="_blank" id="social6"></a>
+                    <a href="#" rel="nofollow" target="_blank"></a>
+                    <a href="#" rel="nofollow" target="_blank" id="social2"></a>
+                    <a href="#" rel="nofollow" target="_blank" id="social3"></a>
+                    <a href="#" rel="nofollow" target="_blank" id="social4"></a>
+                    <a href="#" rel="nofollow" target="_blank" id="social5"></a>
+                    <a href="#" rel="nofollow" target="_blank" id="social6"></a>
                 </div>
+               </noindex>
             </div>
         </div>
         <div class="clear"></div>

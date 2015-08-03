@@ -3,7 +3,7 @@
 namespace frontend\widgets;
 
 
-class BreadcrumbsWidget extends \yii\bootstrap\Widget
+class BreadcrumbsWidget extends \yii\base\Widget
 {
     public $items;
 
