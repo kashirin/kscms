@@ -10,10 +10,10 @@ return [
             'useFileTransport'=>false,
              'transport' => [
                                 'class' => 'Swift_SmtpTransport',
-                                'host' => 'smtp.mastermail.ru',
+                                'host' => 'smtp.masterhost.ru',
                                 'username' => 'admin@myoption.ru',
                                 'password' => 'x73ds871',
-                                'port' => '25',
+                                'port' => '465',
                                 'encryption' => 'tls',
                                 ],
                 
