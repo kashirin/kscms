@@ -65,11 +65,13 @@ class Alert extends \yii\bootstrap\Widget
                     /* assign unique id to each alert box */
                     $this->options['id'] = $this->getId() . '-' . $type . '-' . $i;
 
-                    echo \yii\bootstrap\Alert::widget([
+                    /*echo \yii\bootstrap\Alert::widget([
                         'body' => $message,
                         'closeButton' => $this->closeButton,
                         'options' => $this->options,
-                    ]);
+                    ]);*/
+                    //TODO: wrap in widget
+                    echo '<div id="'.$this->options['id'].'" class="alert '.$this->options['class'].'">'.$message.'</div>';
                 }
 
                 $session->removeFlash($type);

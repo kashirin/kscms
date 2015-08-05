@@ -47,7 +47,7 @@ class CommentRecord extends \yii\db\ActiveRecord
             ['active', 'default','value'=>self::STATUS_IS_ACTIVE],
             ['active', 'boolean'],
             [['created_at', 'updated_at', 'sort', 'user_id', 'active'], 'integer'],
-            [['text'], 'string']
+            [['text','user_name'], 'string']
         ];
     }
 
@@ -164,8 +164,14 @@ class CommentRecord extends \yii\db\ActiveRecord
             'user_id'=>[
                 'label'=>'ID пользователя',
                 'detail'=>false,
-                'grid'=>true,
+                'grid'=>false,
                 'type'=>'int'
+            ],
+            'user_name'=>[
+                'label'=>'Имя пользователя',
+                'detail'=>true,
+                'grid'=>true,
+                'type'=>'string'
             ],
             
             

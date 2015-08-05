@@ -81,7 +81,7 @@ class SiteController extends BaseFrontendController
     }
 
     public function actionIndex($seourl = false)
-    {//\Yii::$app->getSession()->setFlash('error', 'Текст тут');
+    {//\Yii::$app->getSession()->setFlash('success', 'Текст тут');
 
         // 0. homepage
         // 1. content page from structure table

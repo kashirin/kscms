@@ -130,7 +130,7 @@ SnippetWidget::widget([
             </div>
             
             <div class="clear"></div>
-            <?= Alert::widget() ?>
+            
             <div id="heder_right">
                 <div class="clear" style="height:25px;"></div>
                 <!--menu-->
@@ -141,10 +141,12 @@ SnippetWidget::widget([
 
             </div>  
             <div class="clear"></div>
+            <?= Alert::widget() ?>
             <div id="banner">
                 <img src="images/banner.jpg">
             </div>
             <!-- content area -->
+            
             
             <?= $content ?>  
             

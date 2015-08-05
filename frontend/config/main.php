@@ -16,6 +16,9 @@ return [
             'class' => 'dektrium\user\Module',
             'as frontend' => 'dektrium\user\filters\FrontendFilter',
         ],
+        'comment' => [
+            'class' => 'frontend\modules\comment\Module',
+        ],
     ],
     'components' => [
         'log' => [
@@ -40,6 +43,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules'=>[
+                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
                 'error' => 'site/error',
                 'page404' => 'site/page404',
                 'abrakadabra' => 'site/abrakadabra',
