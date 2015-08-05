@@ -48,6 +48,7 @@ return [
                 'page404' => 'site/page404',
                 'abrakadabra' => 'site/abrakadabra',
                 'search' => 'search/index',
+                'sitemap' => 'sitemap/index',
                 '<seourl:[\w-]+>' => 'site/index',
             ],
         ],

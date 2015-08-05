@@ -11,6 +11,7 @@ use backend\behaviors\AdminFormBehavior;
 use common\helpers\Translit;
 use backend\traits\AdminFormTrait;
 use backend\models\comment\CommentRecord;
+use backend\models\structure\StructureRecord;
 
 /**
  * Article model
@@ -109,6 +110,11 @@ class ArticleRecord extends ActiveRecord
 			['name','required']
 			
         ];
+    }
+
+    public function getStructure()
+    {
+        return $this->hasOne(StructureRecord::className(), ['id' => 'parent_id']);
     }
 	
 	

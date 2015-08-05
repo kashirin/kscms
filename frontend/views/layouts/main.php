@@ -157,7 +157,7 @@ SnippetWidget::widget([
                     <ul id="footer_menu">
                         <li><a href="<?=Url::to(['/contacts'])?>">Контакты</a></li>
                         <li><a href="<?=Url::to(['/about'])?>">О сайте</a></li>
-                        <li><a href="<?=Url::to(['/all'])?>">Все статьи</a></li>
+                        <li><a href="<?=Url::to(['/sitemap'])?>">Все статьи</a></li>
                     </ul>
                 </div>
                 <noindex>
