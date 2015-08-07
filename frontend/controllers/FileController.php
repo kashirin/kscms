@@ -19,7 +19,7 @@ class FileController extends BaseFrontendController
     public function actionIndex($code = false)
     {
     	$code = htmlspecialchars($code);
-    	$fileModel = FileRecord::find()->where(['code' => $code])->one;
+    	$fileModel = FileRecord::find()->where(['code' => $code])->one();
     	if(!$fileModel){
     	    throw new \yii\web\NotFoundHttpException('Такого файла не существует');
     	}
