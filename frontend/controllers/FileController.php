@@ -28,7 +28,12 @@ class FileController extends BaseFrontendController
         //$file_path = 'D:/OpenServer/domains/yii/kscms/backend/web'.$fileModel->file;
         $file_info = pathinfo($file_path);
 
-    	return Yii::$app->response->sendFile($file_path, $fileModel->name.'.'.$file_info['extension']);
+        header('Content-type: application/'.$file_info['extension']);
+        header('Content-Disposition: attachment; filename="'.$fileModel->name.'.'.$file_info['extension'].'"');
+        if (readfile( $file_path )){
+            exit;
+        }
+
     }
 
 
