@@ -24,7 +24,7 @@ class FileController extends BaseFrontendController
     	    throw new \yii\web\NotFoundHttpException('Такого файла не существует');
     	}
     	
-    	return Yii::$app->response->sendFile(Yii::getAlias('@frontend').$fileModel->file, $fileModel->name);
+    	return Yii::$app->response->sendFile(Yii::getAlias('@webroot').$fileModel->file, $fileModel->name);
     }
 
 
