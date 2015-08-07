@@ -100,7 +100,7 @@ class FileRecord extends \yii\db\ActiveRecord
             'name'=>[
                 'label'=>'Имя',
                 'detail'=>true,
-                'grid'=>false,
+                'grid'=>true,
                 'type'=>'string'
             ],
             'file'=>[
@@ -109,7 +109,6 @@ class FileRecord extends \yii\db\ActiveRecord
                 'grid'=>true,
                 'type'=>'file'
             ],
-
         ];
     }
 }
