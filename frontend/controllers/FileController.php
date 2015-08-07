@@ -18,7 +18,12 @@ class FileController extends BaseFrontendController
 
     public function actionIndex($code = false)
     {
-    	echo 'download '.$code;
+    	$code = htmlspecialchars($code);
+    	$fileModel = FileModel::find()->where(['code' => $code])->one;
+    	if(!$fileModel){
+    	    throw new \yii\web\NotFoundHttpException('Такого файла не существует');
+    	}
+    	var_dump($fileModel);
     }
 
 
