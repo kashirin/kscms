@@ -19,6 +19,7 @@ class SitemapComponent extends Component
 			    ->select('article.seourl as url, article.name, structure.seourl as s_url, structure.label')
 			    ->leftJoin('structure', '`structure`.`id` = `article`.`parent_id`')
 			    ->where(['article.active' => ArticleRecord::STATUS_IS_ACTIVE])
+			    ->andWhere(['<','article.active_from',time()])
 			    ->with('structure')
 			    ->asArray()
 			    ->all();

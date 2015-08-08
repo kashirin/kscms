@@ -84,6 +84,8 @@ use yii\helpers\Url;
 		<?= $form->field($model, 'color')->dropDownList(
 			['' => 'Стандартный','green'=>'Зеленый', 'red'=>'Красный', 'orange'=>'Оранжевый', 'black'=>'Черный']
 		) ?>
+
+		<?= $form->field($model, 'code')->textInput() ?>
 		</div>
 	</div>
 	

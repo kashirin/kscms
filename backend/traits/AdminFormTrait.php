@@ -8,8 +8,8 @@ trait AdminFormTrait{
 
 
 
-	private static $STATUS_IS_ACTIVE = 1;
-    private static $STATUS_IS_NOT_ACTIVE = 0;
+	public static $STATUS_IS_ACTIVE = 1;
+    public static $STATUS_IS_NOT_ACTIVE = 0;
 
 
 	public function attributeLabels()

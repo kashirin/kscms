@@ -19,9 +19,13 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         //'css/template.css', //include it directly in template
+        'css/jcarousel.basic.css'
     ];
+    public $jsOptions =['position'=>\yii\web\View::POS_HEAD ];
     public $js = [
         'js/template.js',
+        'js/jq.carousel.js',
+        'js/carousel_run.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -43,6 +43,8 @@ class SiteController extends BaseFrontendController
 
     protected function _tryToGetContent($seourl){
 
+        $seourl = htmlspecialchars($seourl);
+
         if(!$seourl){
             return [
                 'type'=>'homepage',
@@ -56,11 +58,18 @@ class SiteController extends BaseFrontendController
                 ->find()
                 ->where(['seourl'=>$seourl /*, 'active'=>StructureRecord::STATUS_IS_ACTIVE */])
                 ->one();
+                
         if($page){
-            return [
-                'type'=>'page',
-                'model'=>$page
-            ];
+
+            $allowed = Yii::$app->mainMenu->checkContentPageUrl($seourl);
+
+            if($allowed){
+                return [
+                    'type'=>'page',
+                    'model'=>$page
+                ];
+            }
+
         }
         // find in  static articles
         $articleModel = new ArticleRecord;

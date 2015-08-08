@@ -1,6 +1,9 @@
 <?php
 /* @var $this yii\web\View */
 
+use frontend\widgets\EventsWidget;
+use backend\models\structure\StructureRecord;
+
 $this->title = 'myoption.ru - Главная страница';
 $this->registerMetaTag([
     'name' => 'description',
@@ -19,41 +22,28 @@ $this->registerMetaTag([
                 </div>
                 <div class="tabs_body">
                 <div class="clear"></div>
-                    <div class="tab1_body tab_body">                    
-                        <table>
-                            <tr>
-                                <th>Актив</th>
-                                <th>Наименование события</th>
-                                <th>Дата (Мск. время)</th>
-                                <th>Описание события</th>
-                            </tr>                               
-                            <tr>
-                                <td class="center">Газпром</td>
-                                <td>Денежная масса М3 (скользящая средняя за 3 мес.) (апр)</td>
-                                <td>3 сентября 2015 года 14:00</td>
-                                <td>Fusion Media не несет никакой
-                                    ответственности за утрату ваших
-                                    в результате того, что вы положились</td>
-                            </tr>   
-                            <tr>
-                                <td class="center">Газпром</td>
-                                <td><a href="#">Денежная масса М3 (скользящая средняя за 3 мес.) (апр)</a></td>
-                                <td>3 сентября 2015 года 14:00</td>
-                                <td>Fusion Media не несет никакой
-                                    ответственности за утрату ваших
-                                    в результате того, что вы положились</td>
-                            </tr>
-                        </table>
+                    <div class="tab1_body tab_body">
+                        <?=EventsWidget::widget(['mode'=>'all'])?>               
                         <div class="clear" style="height:18px;"></div>
-                        <a href="#" class="btn_red">Все события</a><a href="#" class="btn_red" style="margin-left:20px;">Как заработать на событии</a>
+                        <!-- buttons -->
+                        <a href="/zarabotok-na-sobytijakh" class="btn_red">Как заработать на событии</a>
+                        <a href="#" class="btn_red" style="margin-left:20px;">Кнопка 1</a>
+                        <a href="#" class="btn_red" style="margin-left:20px;">Кнопка 2</a>
+                        <!-- end buttons -->
                     </div>
                     <div class="tab2_body tab_body">
-                        2222
+                        <?php
+                        $binpage = StructureRecord::find()->where(['code'=>'content_bin'])->one();
+                        if($binpage){
+                            echo $binpage->content;
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
             
-            
+            <?php
+            /*
             <h1 class="caption blue"><span>Торговая стратегия бинарных опционов 60 секунд (h1)</span></h1>
             <div class="padding37">
                 <div id="breadcrumbs">
@@ -119,8 +109,10 @@ $this->registerMetaTag([
                 
                 
             </div>
+            */
+            ?>
             
-            <div class="caption blue"><span>ПАММ счета бинарных опционов</span></div>   
+            <div class="caption blue"><span>Обзоры событий на бинарных опционах</span></div>   
             <div class="items">
                 <a href="#"><img src="images/b8.jpg"><span>Законы технического анализа Джона Мерфи</span></a>
                 <a href="#"><img src="images/b8.jpg"><span class="arrow_rigth"></span><span>Законы технического анализа Джона Мерфи</span></a>
@@ -134,7 +126,7 @@ $this->registerMetaTag([
             </div>
             <div class="clear"></div>
             
-            <div class="caption red"><span>Торговля с малых сум</span></div>    
+            <div class="caption red"><span>Заработок на инвестициях</span></div>    
             <div class="items">
                 <a href="#"><img src="images/b8.jpg"><span>Законы технического анализа Джона Мерфи</span></a>
                 <a href="#"><img src="images/b8.jpg"><span class="arrow_rigth"></span><span>Законы технического анализа Джона Мерфи</span></a>

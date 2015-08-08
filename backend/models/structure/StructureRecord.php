@@ -13,6 +13,7 @@ use yii\helpers\Url;
  * @property integer $id
  * @property string $label
  * @property string $url
+ * @property string $code
  * @property string $params
  * @property string $info
  * @property integer $sort
@@ -119,6 +120,8 @@ class StructureRecord extends ActiveRecord
 						}
 					}
 				}
+
+
 				
 				
 				return true;
@@ -151,6 +154,13 @@ class StructureRecord extends ActiveRecord
 				$this->updateAttributes(['url','params']);
 			}
 		}
+
+
+		if($insert && empty($this->code)){
+					$this->code = 'code_'.$this->id;
+					$this->updateAttributes(['code']);
+		}
+
 	}
 	
 	public function beforeDelete()
@@ -183,7 +193,8 @@ class StructureRecord extends ActiveRecord
             ['is_dir', 'default', 'value'=>0],
             ['is_dir', 'boolean'],
 			[['label','info','params','url','title','description','keywords','seourl','content','color'],'string'],
-			['label','required']
+			['label','required'],
+			['code', 'string', 'length' => [0, 30]],
 			//[['file','image'], 'string', 'skipOnEmpty'=>true]
 			
         ];
@@ -195,6 +206,7 @@ class StructureRecord extends ActiveRecord
             'label' => 'Название',
             'color' => 'Цвет',
             'url' => 'URL (или {model:имя_модели})',
+            'code' => 'Системное имя (латиницей)',
             'params' => 'Параметры GET апроса',
             'info' => 'Описание',
 			'is_dir' => 'Страница или раздел',

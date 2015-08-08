@@ -50,7 +50,7 @@ return [
                 'search' => 'search/index',
                 'sitemap' => 'sitemap/index',
                 'dl/<code:[\w-]+>' => 'file/index',
-                '<seourl:[\w-]+>' => 'site/index',
+                '<seourl:[\w-\(\)]+>' => 'site/index',
             ],
         ],
     ],

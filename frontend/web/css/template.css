@@ -247,6 +247,7 @@ a{
 	position:absolute;
 	left:0px;
 	top:44px;
+	z-index: 1000;
 }
 #header_menu li:hover ul{
 	display:block;
@@ -269,6 +270,8 @@ a{
 #banner img{
 	width:100%;
 }
+
+
 #coming_events_list{
 	display:none;
 }
@@ -359,16 +362,27 @@ a{
 .new_items a:first-child{
 	padding-top:10px;
 }
+
+.new_items a:hover{
+	color:#ffa200;
+	text-decoration: none;
+}
+
 .arrow_rigth{
 	position:absolute;
 	right:10px;
 	top:40%;
 	background: url("../images/right.jpg");
-	display:block;
+	display:none;
 	width:25px;
 	height:25px;
 	z-index:100;
 }
+
+.new_items a:hover .arrow_rigth{
+	display: block;
+}
+
 #example_items a{
 	margin:10px;
 	color:#90969a;

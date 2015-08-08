@@ -7,6 +7,12 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use frontend\widgets\Alert;
 
+use backend\models\carousel\CarouselRecord;
+use frontend\widgets\CarouselWidget;
+use frontend\widgets\EventsWidget;
+use frontend\widgets\TopbrokersWidget;
+use frontend\widgets\TopnewsWidget;
+
 use backend\models\snippet\SnippetRecord;
 use frontend\widgets\snippet\SnippetWidget;
 use frontend\widgets\MainMenuWidget;
@@ -44,55 +50,17 @@ SnippetWidget::widget([
     <div class="wrap">
         <div id="left">
             <div class="header">
-                <a href="#"><img src="images/logo.jpg" alt="logo"></a>
+                <a href="/"><img src="images/logo.jpg" alt="logo"></a>
             </div>
-            <a href="#" id="coming_events" class="open left_caption"><span ><img src="images/ico_calendar.png"></span><span>Ближайшие События</span></a>
-            <div id="coming_events_list">
-                <div class="coming_event coming_event2">
-                    <span class="coming_event_title event_header">Актив</span>
-                    <span class="coming_event_date event_header">Дата (Мскв.)</span>
-                </div>
-                <div class="coming_event">
-                    <span class="coming_event_title">Газпром</span>
-                    <span class="coming_event_date">14:00  3.09.2015 г.</span>
-                </div>
-                <div class="coming_event coming_event2">
-                    <span class="coming_event_title">Газпром<br>Другое название</span>
-                    <span class="coming_event_date">14:00  3.09.2015 г.</span>
-                </div>  
-                <div class="coming_event">
-                    <span class="coming_event_title">Газпром</span>
-                    <span class="coming_event_date">14:00  3.09.2015 г.</span>
-                </div>
-            </div>
+             <?=EventsWidget::widget()?>
+            <!-- events -->
             <div class="clear"></div>
-            <div class="left_caption"><span ><img src="images/ico_star.png"></span><span>Популярные Брокеры</span></div>
-            <div id="popular">
-                <a href="#"><div class="new"></div><img src="images/b1.jpg"></a>
-                <a href="#"><div class="new"></div><img src="images/b2.jpg"></a>
-                <a href="#"><div class="new"></div><img src="images/b3.jpg"></a>
-                <a href="#"><div class="new"></div><img src="images/b4.jpg"></a>
-            </div>
-            <div class="clear" style="height:40px;"></div>
-            <div class="left_caption red"><span ><img src="images/ico_file.png"></span><span>Новое на Сайте</span></div>
-            <div class="new_items">
-                <a href="#"><img src="images/b7.jpg"><span class="arrow_rigth"></span>
-                    <div class="clear" style="height:5px;"></div>
-                    <span>Основа прибыльной торговли<br>
-                          бинарными опционами</span>
-                </a>
-                <a href="#"><img src="images/b5.jpg">
-                    <div class="clear" style="height:5px;"></div>
-                    <span>Основа прибыльной торговли<br>
-                          бинарными опционами</span>
-                </a>    
-                <a href="#"><img src="images/b6.jpg">
-                    <div class="clear" style="height:5px;"></div>
-                    <span>Основа прибыльной торговли<br>
-                          бинарными опционами</span>
-                </a>    
-            </div>      
-            <div class="clear" style="height:36px;"></div>
+        
+            <!-- topbrokers -->
+            <?=TopbrokersWidget::widget()?>
+            <div class="clear" style="height:28px;"></div>
+            
+            <!-- советуем -->
             <div class="left_caption blue"><span><img src="images/ico_rupor.png"></span><span>Советуем</span></div>
             <div id="help_items">
                 <a href="#" class="left_caption"><span><img src="images/ico_doc.png"></span><span class="help_items_title">Торговля по новостям</span></a>
@@ -102,7 +70,14 @@ SnippetWidget::widget([
                 <a href="#" class="left_caption"><span><img src="images/ico_rub.png"></span><span class="help_items_title">Бинарные опционыв рублях</span></a>
                 <a href="#" class="left_caption"><span><img src="images/ico_message.png"></span><span class="help_items_title">Бесплатная помощь</span></a>
             </div>
+            <div class="clear" style="height:36px;"></div>
+            <!-- конец советуем -->
+            
+            <!-- topnews -->
+            <?=TopnewsWidget::widget()?>
             <div class="clear" style="height:20px;"></div>
+            
+            <!-- примеры зароботка -->
             <div class="left_caption"><span ><img src="images/ico_example.png"></span><span>Примеры Заработка</span></div>
             <div id="example_items">
                 <a href="#">Памм-счета Alpari – по алгоритму из курса Памм-инвестор</a>
@@ -111,13 +86,15 @@ SnippetWidget::widget([
                 <a href="#">Памм-счета Alpari – по алгоритму из курса Памм-инвестор</a> 
             </div>
             <div class="clear" style="height:200px;"></div>
+            <!-- конец примеры зароботка -->
+
             <div id="left_footer">Предупреждение о риске: © 2015 
                 MYOPTION не несет никакой
                 ответственности за утрату ваших денег
                 в результате того, что вы положились на
                 информацию, содержащуюся на этом
                 сайте, включая данные, котировки,
-                графики и сигналы форекс
+                графики и сигналы форекс. Торговля на финансовых рынках связна с высоким уровнем риска. Все материалы сайта носят лишь информационный характер и отражают мнение автора. Сайт не несет ответственности за возможные потери трейдеров, воспользовавшихся любыми данными (информацией, сигналами и т.д.), размещенными на сайте myoption.ru.
             </div>
         </div>
         <div id="right">
@@ -141,10 +118,16 @@ SnippetWidget::widget([
 
             </div>  
             <div class="clear"></div>
+
             <?= Alert::widget() ?>
-            <div id="banner">
-                <img src="images/banner.jpg">
-            </div>
+            
+            <!-- carousel -->
+            <?=CarouselWidget::widget([
+                'items' => CarouselRecord::find()
+                            ->where(['active'=>CarouselRecord::$STATUS_IS_ACTIVE, 'parent_id'=>22 /* from carousel branch */ ])
+                            ->orderBy(['sort' => SORT_ASC])
+                            ->all()
+            ])?>
             <!-- content area -->
             
             

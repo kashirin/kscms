@@ -191,4 +191,15 @@ class MainMenuComponent extends Component
     }
 
 
+    /**
+    * check if page allowed (from structure record table), some kind of white list
+    */
+    public function checkContentPageUrl($url){
+        $arPages = ['about'];
+        
+        return in_array($url,$arPages);
+         
+    }
+
+
 }

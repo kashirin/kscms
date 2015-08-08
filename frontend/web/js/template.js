@@ -9,6 +9,7 @@ $(function() {
 			  $( "#coming_events" ).removeClass('close');
 			  $( "#coming_events" ).addClass('open');
 		  }
+		  return false;
 		});
 		$(".tabs a").click(function() {
 			 var id = $(this).attr('data_id');
