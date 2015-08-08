@@ -58,10 +58,10 @@ class SiteController extends BaseFrontendController
                 ->find()
                 ->where(['seourl'=>$seourl /*, 'active'=>StructureRecord::STATUS_IS_ACTIVE */])
                 ->one();
-                
+
         if($page){
 
-            $allowed = Yii::$app->mainMenu->checkContentPageUrl($seourl);
+            $allowed = Yii::$app->mainMenu->checkContentPageCode($page->code);
 
             if($allowed){
                 return [

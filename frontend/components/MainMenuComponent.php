@@ -192,12 +192,12 @@ class MainMenuComponent extends Component
 
 
     /**
-    * check if page allowed (from structure record table), some kind of white list
+    * check if page allowed (from structure record table), some kind of black list
     */
-    public function checkContentPageUrl($url){
-        $arPages = ['about'];
-        
-        return in_array($url,$arPages);
+    public function checkContentPageCode($code){
+        $arPages = ['content_bin'];
+
+        return !in_array($code,$arPages);
          
     }
 
