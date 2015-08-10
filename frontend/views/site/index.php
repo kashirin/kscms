@@ -116,14 +116,14 @@ $this->registerMetaTag([
             <?=LastnewsWidget::widget([
                     'count' => 6,
                     'captionClass' => 'caption blue',
-                    'parentCode' => 'base',
+                    'parentCode' => 'on_events',
                     'caption'=>'Обзоры событий на бинарных опционах'
             ])?>
 
             <?=LastnewsWidget::widget([
                     'count' => 3,
                     'captionClass' => 'caption red',
-                    'parentCode' => 'base',
+                    'parentCode' => 'pamm',
                     'caption'=>'Заработок на инвестициях'
             ])?>
             
