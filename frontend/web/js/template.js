@@ -23,10 +23,17 @@ $(function() {
 });
 
 $(window).load(function() {
- if($('#left').height()>$('#right').height()){
-			$('#right').height($('#left').height());	
-		} else{
-			$('#left').height($('#right').height());	
-		}
+
+		setTimeout(function(){
+
+			if($('#left').height()>$('#right').height()){
+				$('#right').height($('#left').height());	
+			} else{
+				$('#left').height($('#right').height());	
+			}
+
+		},10);
+
+ 		
 		
 });

@@ -134,7 +134,7 @@ SnippetWidget::widget([
             <?= $content ?>  
             
             <!-- end of content area -->
-            <div class="clear" style="height:100px;"></div>
+            <!--<div class="clear" style="height:100px;"></div>-->
             <div id="footer">
                 <div id="footer_menu_body">
                     <ul id="footer_menu">
