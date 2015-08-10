@@ -25,20 +25,30 @@ class SearchController extends BaseFrontendController
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
+            ]
         ];
     }
 
-    public function actionIndex($seourl = false)
-    {
-        $model = new SearchModel;
-        $res = $model->find('город')->getAllModels();
-        var_dump($res);
-        return $this->render('site/index');
+    
+
+    public function actionIndex()
+    {   
+
+        try {
+            
+            $q = htmlspecialchars(Yii::$app->getRequest()->get('q'));
+
+            $model = new SearchModel;
+
+            $models = $model->find($q)->getAllModels();
+
+        } catch (\Exception $e) {
+           \Yii::$app->getSession()->setFlash('error', 'Ошибка запроса, вероятно вы ничего не ввели!');
+            
+            $this->redirect('/');
+        }
+
+        return $this->render('index',['models'=>$models, 'q'=>$q]);
     }
 
 

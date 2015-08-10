@@ -100,8 +100,8 @@ SnippetWidget::widget([
         <div id="right">
 
             <div class="header">
-                <form id="search_form" method="post">
-                    <div><input type="text" id="search_text" name="search" placeholder="Поиск по сайту"></div>
+                <form id="search_form" method="get" action="/search">
+                    <div><input type="text" id="search_text" name="q" placeholder="Поиск по сайту"></div>
                     <input type="image" id="search_btn" src="images/search.jpg" name="view" value="view">
                 </form>
             </div>
