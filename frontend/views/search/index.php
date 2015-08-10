@@ -85,6 +85,10 @@ if(count($models)<=0){
 			
 			<div class="clear" style="height:50px;"></div>
 
+
+
+			<div>
+
             <div class="index_news_caption"><a href="/<?=$model->seourl?>"><?=$model->name?></a></div> 
                 
 			<div class="index_news">
@@ -99,6 +103,9 @@ if(count($models)<=0){
 				<a href="/<?=$model->seourl?>" class="index_news_more">читать подробнее</a>
 			</div>
 			
+			</div>
+
+			
 			<?if($k!=count($models)-1){?>
 				<div class="clear" style="height:50px; border-bottom: 2px solid #d8d8d8;"></div>
 			<?}?>
@@ -107,7 +114,7 @@ if(count($models)<=0){
 
 		</div>
 
-		
+
 
 	</div>
 
