@@ -3,6 +3,7 @@
 
 use frontend\widgets\EventsWidget;
 use backend\models\structure\StructureRecord;
+use frontend\widgets\LastnewsWidget;
 
 $this->title = 'myoption.ru - Главная страница';
 $this->registerMetaTag([
@@ -111,24 +112,19 @@ $this->registerMetaTag([
             </div>
             */
             ?>
+
+            <?=LastnewsWidget::widget([
+                    'count' => 6,
+                    'captionClass' => 'caption blue',
+                    'parentCode' => 'base',
+                    'caption'=>'Обзоры событий на бинарных опционах'
+            ])?>
+
+            <?=LastnewsWidget::widget([
+                    'count' => 3,
+                    'captionClass' => 'caption red',
+                    'parentCode' => 'base',
+                    'caption'=>'Заработок на инвестициях'
+            ])?>
             
-            <div class="caption blue"><span>Обзоры событий на бинарных опционах</span></div>   
-            <div class="items">
-                <a href="#"><img src="images/b8.jpg"><span>Законы технического анализа Джона Мерфи</span></a>
-                <a href="#"><img src="images/b8.jpg"><span class="arrow_rigth"></span><span>Законы технического анализа Джона Мерфи</span></a>
-                <a href="#"><img src="images/b8.jpg"><span>Законы технического анализа Джона Мерфи</span></a>
-            </div>  
-                <div class="clear line_gray"></div>
-            <div class="items">             
-                <a href="#"><img src="images/b8.jpg"><span>Законы технического анализа Джона Мерфи</span></a>
-                <a href="#"><img src="images/b8.jpg"><span class="arrow_rigth"></span><span>Законы технического анализа Джона Мерфи</span></a>
-                <a href="#"><img src="images/b8.jpg"><span>Законы технического анализа Джона Мерфи</span></a>
-            </div>
-            <div class="clear"></div>
             
-            <div class="caption red"><span>Заработок на инвестициях</span></div>    
-            <div class="items">
-                <a href="#"><img src="images/b8.jpg"><span>Законы технического анализа Джона Мерфи</span></a>
-                <a href="#"><img src="images/b8.jpg"><span class="arrow_rigth"></span><span>Законы технического анализа Джона Мерфи</span></a>
-                <a href="#"><img src="images/b8.jpg"><span>Законы технического анализа Джона Мерфи</span></a>
-            </div>
