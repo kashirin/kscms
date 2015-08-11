@@ -26,8 +26,11 @@ $this->registerMetaTag([
                 
                 <?= $model->detail_text ?>
 
-
-				<div class="soc"><img src="images/soc.jpg"></div>
+    
+				<div class="soc">
+                    <?= $this->render('_soc_buttons') ?>
+                    <!--<img src="images/soc.jpg">-->
+                </div>
 				<!-- comments -->
 				<?= CommentsWidget::widget([
 					'parent_id' => $model->id,

@@ -43,6 +43,7 @@ SnippetWidget::widget([
     <link rel="stylesheet" type="text/css" media="all" href="css/template.css" />
     <link rel="stylesheet" type="text/css" media="screen and (max-width: 1220px)" href="css/template1000.css" />
     <?php $this->head() ?>
+    <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
 </head>
 <body>
     <?php $this->beginBody() ?>
