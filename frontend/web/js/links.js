@@ -110,7 +110,7 @@ $(function(){
     		}
     	}
 
-    	var i = 10;
+    	var i = 90;
 
     	minusSec();
 
