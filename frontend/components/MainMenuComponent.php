@@ -13,32 +13,32 @@ class MainMenuComponent extends Component
     protected $arMenu = [
         [
             'label'    => 'Новичкам',
-            'url'      => 'novichkam',
+            'url'      => 'Novichkam-rynka-binarnyh-opcionov',
             'type'     => 'page', // type of content
             'children' => [
                 [
                 'label' => 'Базовые знания',
-                'url'   => 'bazovye-znanija',
+                'url'   => 'Bazovye-znanija-dlja-trejderov',
                 'type'  => 'page'
                 ],
                 [
                 'label' => 'Обучение',
-                'url'   => 'obuchenie',
+                'url'   => 'Obuchenie-torgovle',
                 'type'  => 'page'
                 ],
                 [
                 'label' => 'Полезное новичкам',
-                'url'   => 'poleznoe-novichkam',
+                'url'   => 'Poleznye-obzory-dlja-novichkov',
                 'type'  => 'page'
                 ],
                 [
                 'label' => 'Технический анализ',
-                'url'   => 'tekhnicheskijj-analiz',
+                'url'   => 'Tehnicheskij-analiz-na-rynke-binarnyh-opcionov',
                 'type'  => 'page'
                 ],
                 [
                 'label' => 'Статьи о бинарных опционах',
-                'url'   => 'stati-o-binarnykh-opcionakh',
+                'url'   => 'Stati-o-binarnyh-opcionah',
                 'type'  => 'page'
                 ],
 
@@ -47,22 +47,22 @@ class MainMenuComponent extends Component
 
         [
             'label'    => 'Торговля',
-            'url'      => 'torgovlja',
+            'url'      => 'Torgovlja-binarnymi-opcionami',
             'type'     => 'page',
             'children' => [
                 [
                 'label' => 'Стратегии',
-                'url'   => 'strategii',
+                'url'   => 'Strategii-na-binarnyh-opcionah',
                 'type'  => 'page'
                 ],
                 [
                 'label' => 'Индикаторы',
-                'url'   => 'indikatory',
+                'url'   => 'Indikatory-na-rynke-binarnyh-opcionov',
                 'type'  => 'page'
                 ],
                 [
                 'label' => 'Результаты',
-                'url'   => 'rezultaty',
+                'url'   => 'Rezultaty-torgovli-na-rynke',
                 'type'  => 'page'
                 ],
                 [
@@ -75,7 +75,7 @@ class MainMenuComponent extends Component
 
         [
             'label'    => 'Брокеры',
-            'url'      => 'brokery',
+            'url'      => 'Brokery-binarnyh-opcionov',
             'type'     => 'page',
             'children' => [
                 [
@@ -85,17 +85,17 @@ class MainMenuComponent extends Component
                 ],
                 [
                 'label' => 'Обзоры компаний',
-                'url'   => 'obzory-kompanijj',
+                'url'   => 'Obzory-brokerov-binarnyh-opcionov',
                 'type'  => 'page'
                 ],
                 [
                 'label' => 'Статьи о брокерах',
-                'url'   => 'stati-o-brokerakh',
+                'url'   => 'Stati-o-brokerah',
                 'type'  => 'page'
                 ],
                 [
                 'label' => 'Бонусы',
-                'url'   => 'bonusy',
+                'url'   => 'Bonusy-brokerov-binarnyh-opcionov',
                 'type'  => 'page'
                 ],
             ]
@@ -103,22 +103,22 @@ class MainMenuComponent extends Component
 
         [
             'label'    => 'Инвестиции',
-            'url'      => 'investicii',
+            'url'      => 'Ob-investicijah-na-rynke-binarnyh-opcionov',
             'type'     => 'page',
             'children' => [
                 [
                 'label' => 'ПАММ бинарных опционов',
-                'url'   => 'pamm-binarnykh-opcionov',
+                'url'   => 'PAMM-scheta-na-binarnyh-opcionah',
                 'type'  => 'page'
                 ],
                 [
                 'label' => 'Заработок на событиях',
-                'url'   => 'zarabotok-na-sobytijakh',
+                'url'   => 'Zarabotok-na-sobytijah',
                 'type'  => 'page'
                 ],
                 [
                 'label' => 'Сигналы',
-                'url'   => 'signaly',
+                'url'   => 'Signaly-binarnyh-opcionov',
                 'type'  => 'page'
                 ]
             ]
