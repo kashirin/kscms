@@ -620,6 +620,31 @@ h5,h6{
 	font-style: italic;
 	font-size:24px;
 }
+
+.pic2_block{
+	background: #f1f1f1 url("../images/pic2.jpg") no-repeat 0px 43px;
+	padding-top:43px;
+	padding-bottom:43px;
+	padding-left:100px;
+	padding-right:100px;
+	position:relative;
+	color:#5c6265;
+	font-style: italic;
+	font-size:24px;
+}
+
+.pic3_block{
+	background: #5c5c5c url("../images/pic3.jpg") no-repeat 0px 43px;
+	padding-top:43px;
+	padding-bottom:43px;
+	padding-left:100px;
+	padding-right:100px;
+	position:relative;
+	color:#ffffff;
+	font-style: italic;
+	font-size:24px;
+}
+
 #caption_comment{
 	display:block;
 	font-size:18px;
