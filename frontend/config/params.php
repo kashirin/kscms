@@ -1,5 +1,5 @@
 <?php
 return [
-    'adminEmail' => 'admin@example.com',
+    'adminEmail' => 'kasser2005@gmail.com',
     'siteIsClosed' => true
 ];

@@ -23,10 +23,12 @@ class AppAsset extends AssetBundle
     ];
     public $jsOptions =['position'=>\yii\web\View::POS_HEAD ];
     public $js = [
+        'js/jqModal.js',
         'js/template.js',
         'js/jq.carousel.js',
         'js/carousel_run.js',
-        'js/links.js',
+        'js/links.js'
+        
     ];
     public $depends = [
         'yii\web\YiiAsset',

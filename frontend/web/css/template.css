@@ -779,3 +779,71 @@ width:100%;
     padding: 10px 18px;
     text-decoration: none;
 }
+
+.hide{
+	display: none;
+}
+
+
+.hideWrap { clear:both; display:block; position: relative; overflow:hidden; height:16px;}
+.jqmWindow { display: none; position: fixed; background:#fff; overflow:hidden;}
+.jqmOverlay { background-color: #000; }
+* html .jqmWindow { position: absolute; top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');}
+.jqmWindow { top:10%; left:50%; margin-left: -250px;}
+.close, .close:hover { display:block; background:url(../images/close.png) 0 0 no-repeat; width:13px; height:13px; position:absolute; right:19px; top:19px; overflow:hidden; text-indent:-2000px; text-decoration:none;}
+.jqmWindow b { font-size:18px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; color:#191919; margin-bottom:22px;}
+.inp { font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#1f1f1f; margin:0; padding:0 8px; width:283px; height:26px; line-height:26px; background:#fff; border:#c2c2c2 1px solid;}
+.jqmWindow p { margin-bottom:10px;}
+
+.contact_form{
+	width: 500px;
+	padding: 40px;
+}
+
+.contact_form .help-block{
+	color: #808080;
+	display:none;
+}
+
+.form_title{
+    color: #5c5c5c;
+    font-size: 18px;
+    padding-bottom: 28px;
+}
+
+.contact_form input[type=text] {
+    background-color: #f3f3f3;
+    padding-left: 12px;
+    width: 200px;
+    color: #929292;
+    font-style: italic;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.contact_form textarea {
+    background-color: #f3f3f3;
+    padding: 12px;
+    width: 400px;
+    color: #929292;
+    font-style: italic;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    height: 84px;
+}
+
+.contact_form button.btn-primary {
+    background-color: #ff5a5f;
+    width: 113px;
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    height: 41px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form_hint{
+	color: #a0a0a0;
+}

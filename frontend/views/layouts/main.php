@@ -17,6 +17,8 @@ use backend\models\snippet\SnippetRecord;
 use frontend\widgets\snippet\SnippetWidget;
 use frontend\widgets\MainMenuWidget;
 
+use frontend\models\ContactForm;
+
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -47,6 +49,11 @@ SnippetWidget::widget([
 </head>
 <body>
     <?php $this->beginBody() ?>
+
+
+    <?= $this->render('_contactform', [
+        'model' => new ContactForm
+    ]) ?>
 
     <div class="wrap">
         <div id="left">
@@ -141,7 +148,7 @@ SnippetWidget::widget([
             <div id="footer">
                 <div id="footer_menu_body">
                     <ul id="footer_menu">
-                        <li><a href="<?=Url::to(['/contacts'])?>">Контакты</a></li>
+                        <li><a href="#" class="contacts_btn">Контакты</a></li>
                         <li><a href="<?=Url::to(['/about'])?>">О сайте</a></li>
                         <li><a href="<?=Url::to(['/sitemap'])?>">Все статьи</a></li>
                     </ul>

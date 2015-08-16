@@ -20,6 +20,20 @@ $(function() {
 			 $('.tabs_body .'+id+'_body').show();	
 			 return false;
 		});
+
+
+		$('#contacts').jqm({modal: true, overlay:55, trigger: 'a.contacts_btn'});
+
+		// placeholder for textarea
+
+		$('textarea').on('focus', function(){
+
+			if($(this).text() == 'сообщение'){
+				$(this).text('');
+			}
+
+		});
+
 });
 
 $(window).load(function() {
@@ -34,6 +48,7 @@ $(window).load(function() {
 
 		},10);
 
+ 		
  		
 		
 });

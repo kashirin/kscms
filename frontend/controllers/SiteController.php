@@ -16,6 +16,7 @@ use yii\filters\AccessControl;
 use frontend\utilities\BaseFrontendController;
 use backend\models\structure\StructureRecord;
 use backend\models\article\ArticleRecord;
+
 /**
  * Site controller
  */
@@ -146,7 +147,19 @@ class SiteController extends BaseFrontendController
 
     
 
-    
+    public function actionContact()
+    {
+        $model = new ContactForm();
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
+                Yii::$app->session->setFlash('success', 'Ваше сообщение отправлено');
+            } else {
+                Yii::$app->session->setFlash('error', 'В процессе отправки сообщения произошла ошибка');
+            }
+        }
+
+        $this->redirect('/');
+    }
 
     
 

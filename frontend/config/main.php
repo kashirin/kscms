@@ -47,6 +47,7 @@ return [
                 'error' => 'site/error',
                 'page404' => 'site/page404',
                 'abrakadabra' => 'site/abrakadabra',
+                'contact' => 'site/contact',
                 'search' => 'search/index',
                 'sitemap' => 'sitemap/index',
                 'dl/<code:[\w-]+>' => 'file/index',
