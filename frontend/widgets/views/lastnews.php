@@ -5,7 +5,11 @@
             <?foreach ($items as $item){?>
                 <? $cnt++; ?>
 
-                <a href="/<?=$item->seourl?>"><img width="286" src="<?=$item->image?>"><span><?=$item->name?></span></a>
+                <a href="/<?=$item->seourl?>">
+					<img width="286" src="<?=$item->image?>">
+					<span class="arrow_rigth"></span>
+					<span><?=$item->name?></span>
+				</a>
                 
                 <? if($cnt % 3 == 0){?>
                 </div>

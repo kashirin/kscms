@@ -329,7 +329,7 @@ a{
 }
 #popular a{
 	display:block;
-	height:72px;
+	height:108px;
 	width:100%;
 	position:relative;
 }
@@ -368,6 +368,11 @@ a{
 	text-decoration: none;
 }
 
+.items a:hover{
+	color:#ffa200;
+	text-decoration: none;
+}
+
 .arrow_rigth{
 	position:absolute;
 	right:10px;
@@ -380,6 +385,11 @@ a{
 }
 
 .new_items a:hover .arrow_rigth{
+	display: block;
+}
+
+
+.items a:hover .arrow_rigth{
 	display: block;
 }
 
@@ -569,7 +579,7 @@ a{
 	color:#8b8b8b;
 }
 #right p{
-	text-indent:36px;
+	/*text-indent:36px;*/
 	line-height: 1.5;
 }
 h2,h3,h4,h5,h6{
@@ -599,7 +609,16 @@ h5,h6{
 .padding37 ul{
 	list-style-image: url("../images/arrow_blue.jpg");
 	text-indent:3px!important;
-	color:#3b8fdc;
+	color:#355961;
+	font-style: italic;
+	margin:15px;
+	line-height: 22px;
+}
+
+.padding37 ol{
+	
+	text-indent:3px!important;
+	color:#355961;
 	font-style: italic;
 	margin:15px;
 	line-height: 22px;

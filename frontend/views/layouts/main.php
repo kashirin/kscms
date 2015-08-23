@@ -149,7 +149,7 @@ SnippetWidget::widget([
                 <div id="footer_menu_body">
                     <ul id="footer_menu">
                         <li><a href="#" class="contacts_btn">Контакты</a></li>
-                        <li><a href="<?=Url::to(['/about'])?>">О сайте</a></li>
+                        <li><a href="<?=Url::to(['/o-sajte'])?>">О сайте</a></li>
                         <li><a href="<?=Url::to(['/sitemap'])?>">Все статьи</a></li>
                     </ul>
                 </div>
@@ -159,8 +159,8 @@ SnippetWidget::widget([
                     <a href="#" rel="nofollow" target="_blank" id="social2"></a>
                     <a href="#" rel="nofollow" target="_blank" id="social3"></a>
                     <a href="#" rel="nofollow" target="_blank" id="social4"></a>
-                    <a href="#" rel="nofollow" target="_blank" id="social5"></a>
-                    <a href="#" rel="nofollow" target="_blank" id="social6"></a>
+                    <!--<a href="#" rel="nofollow" target="_blank" id="social5"></a>
+                    <a href="#" rel="nofollow" target="_blank" id="social6"></a>-->
                 </div>
                </noindex>
             </div>
