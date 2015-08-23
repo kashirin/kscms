@@ -8,6 +8,7 @@ use frontend\models\ContactForm;
 /* @var $model \frontend\models\ContactForm */
 ?>
 <div class="jqmWindow contact_form" id="contacts">
+<div class="cls jqmClose">x</div>
 <div class="form_title">Оставить сообщение</div>
 <?
 if(empty($model->body)){

@@ -18,6 +18,10 @@ return [
 			'layout'=>'wide',
 			'as backendFIlter' => 'backend\filters\BackendFilter',
         ],
+        /*'ksconfig' => [
+            'class' => 'kasser\ksconfig\Module',
+            //'as backendFIlter' => 'backend\filters\BackendFilter',
+        ],*/
     ],
     'components' => [
         'GlobalBeforeComponent'=>[

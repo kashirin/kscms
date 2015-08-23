@@ -51,7 +51,7 @@ class ArticleSearch extends ArticleRecord
             'query' => $query,
 			'sort'=> ['defaultOrder' => ['created_at'=>SORT_DESC]],
 			'pagination' => [
-				'pageSize' => 3,
+				'pageSize' => 10,
 			],
         ]);
 
