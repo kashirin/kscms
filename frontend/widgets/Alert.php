@@ -58,6 +58,19 @@ class Alert extends \yii\bootstrap\Widget
         foreach ($flashes as $type => $data) {
             if (isset($this->alertTypes[$type])) {
                 $data = (array) $data;
+				$js = '<script>
+				$(function(){
+				
+					$(".close_alert").on("click",function(){
+					
+						$(this).closest("div.alert").hide();
+					
+					});
+				
+				});
+				</script>
+				';
+				echo $js."\n";
                 foreach ($data as $i => $message) {
                     /* initialize css class for each alert box */
                     $this->options['class'] = $this->alertTypes[$type] . $appendCss;
@@ -71,7 +84,8 @@ class Alert extends \yii\bootstrap\Widget
                         'options' => $this->options,
                     ]);*/
                     //TODO: wrap in widget
-                    echo '<div id="'.$this->options['id'].'" class="alert '.$this->options['class'].'">'.$message.'</div>';
+					
+                    echo '<div id="'.$this->options['id'].'" class="alert '.$this->options['class'].'"><span class="close_alert">закрыть</span>'.$message.'</div>';
                 }
 
                 $session->removeFlash($type);

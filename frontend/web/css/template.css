@@ -872,3 +872,11 @@ width:100%;
 .form_hint{
 	color: #a0a0a0;
 }
+
+.close_alert{
+	float:right;
+	color: brown;
+	font-size: 12px;
+	font-weight: normal;
+	cursor: pointer;
+}
