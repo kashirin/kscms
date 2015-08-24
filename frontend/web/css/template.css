@@ -368,9 +368,21 @@ a{
 	text-decoration: none;
 }
 
+
+
 .items a:hover{
 	color:#ffa200;
 	text-decoration: none;
+}
+
+
+
+.darken{
+
+    display: inline-block;
+    background: black;
+    padding: 0;
+
 }
 
 .arrow_rigth{
@@ -392,6 +404,17 @@ a{
 .items a:hover .arrow_rigth{
 	display: block;
 }
+
+.new_items a:hover img{
+	opacity:0.7;
+}
+
+
+.items a:hover img{
+	opacity:0.7;
+}
+
+
 
 #example_items a{
 	margin:10px;

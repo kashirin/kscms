@@ -6,7 +6,7 @@
                 <? $cnt++; ?>
 
                 <a href="/<?=$item->seourl?>">
-					<img width="286" src="<?=$item->image?>">
+					<div class="darken"><img width="286" src="<?=$item->image?>"></div>
 					<span class="arrow_rigth"></span>
 					<span><?=$item->name?></span>
 				</a>

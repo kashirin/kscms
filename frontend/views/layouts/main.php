@@ -93,7 +93,7 @@ SnippetWidget::widget([
                 <a href="#">Памм-счета Alpari – по алгоритму из курса Памм-инвестор</a> 
                 <a href="#">Памм-счета Alpari – по алгоритму из курса Памм-инвестор</a> 
             </div>
-            <div class="clear" style="height:200px;"></div>
+            <div class="clear" style="height:250px;"></div>
             <!-- конец примеры зароботка -->
 
             <div id="left_footer">Предупреждение о риске: © 2015 
