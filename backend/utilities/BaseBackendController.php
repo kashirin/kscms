@@ -105,9 +105,13 @@ class BaseBackendController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
 
-        return $this->redirect(['index']);
+        $parent_id = $model->parent_id;
+
+        $model->delete();
+
+        return $this->redirect(['index', 'parent_id'=>$parent_id]);
     }
 
     /**
