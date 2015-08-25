@@ -11,7 +11,7 @@ class EventsWidget extends \yii\base\Widget
 
     private $_view;
 
-    const CNT = 3;
+    const CNT = 5;
 
     public $mode = 'top';
 

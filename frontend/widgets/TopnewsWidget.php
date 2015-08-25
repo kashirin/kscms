@@ -15,7 +15,7 @@ class TopnewsWidget extends \yii\base\Widget
     						->where(['active'=>ArticleRecord::STATUS_IS_ACTIVE])
                             ->andWhere(['<','active_from',time()])
                             ->orderBy(['active_from' => SORT_DESC])
-                            ->limit(3)
+                            ->limit(5)
                             ->all();
 
     }

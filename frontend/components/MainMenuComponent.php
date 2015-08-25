@@ -67,7 +67,7 @@ class MainMenuComponent extends Component
                 ],
                 [
                 'label' => 'Календарь событий',
-                'url'   => 'calendar-need-to-be-changed',
+                'url'   => 'Jekonomicheskij-kalendar-s-obnovleniem-dannyh-v-realnom-vremeni',
                 'type'  => 'article' // as one article from
                 ],
             ]
@@ -80,7 +80,7 @@ class MainMenuComponent extends Component
             'children' => [
                 [
                 'label' => 'Рейтинг брокеров',
-                'url'   => 'brating-need-to-be-changed',
+                'url'   => 'Rejting-brokerov-binarnyh-opcionov',
                 'type'  => 'article'
                 ],
                 [

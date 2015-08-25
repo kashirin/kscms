@@ -71,12 +71,12 @@ SnippetWidget::widget([
             <!-- советуем -->
             <div class="left_caption blue"><span><img src="images/ico_rupor.png"></span><span>Советуем</span></div>
             <div id="help_items">
-                <a href="#" class="left_caption"><span><img src="images/ico_doc.png"></span><span class="help_items_title">Торговля по новостям</span></a>
-                <a href="#" class="left_caption"><span><img src="images/ico_money.png"></span><span class="help_items_title">Простые инвестиции</span></a>
-                <a href="#" class="left_caption"><span><img src="images/ico_money2.png"></span><span class="help_items_title">Как выбрать брокера</span></a>
-                <a href="#" class="left_caption"><span><img src="images/ico_impuls.png"></span><span class="help_items_title">Демо счет</span></a>
-                <a href="#" class="left_caption"><span><img src="images/ico_rub.png"></span><span class="help_items_title">Бинарные опционыв рублях</span></a>
-                <a href="#" class="left_caption"><span><img src="images/ico_message.png"></span><span class="help_items_title">Бесплатная помощь</span></a>
+                <a href="/Torgovlja-po-novostjam-na-binarnyh-opcionah" class="left_caption"><span><img src="images/ico_doc.png"></span><span class="help_items_title">Торговля по новостям</span></a>
+                <a href="/Kak-prosto-i-jeffektivno-investirovat-v-binarnye-opciony" class="left_caption"><span><img src="images/ico_money.png"></span><span class="help_items_title">Простые инвестиции</span></a>
+                <a href="/Kak-pravilno-vybirat-brokera-dlja-torgovli-binarnymi-opcionami" class="left_caption"><span><img src="images/ico_money2.png"></span><span class="help_items_title">Как выбрать брокера</span></a>
+                <a href="/Platforma-s-demo-schetom-na-rynke-binarnyh-opcionov" class="left_caption"><span><img src="images/ico_impuls.png"></span><span class="help_items_title">Демо счет</span></a>
+                <a href="/Binarnye-opciony-s-depozitom-v-rubljah" class="left_caption"><span><img src="images/ico_rub.png"></span><span class="help_items_title">Бинарные опционыв рублях</span></a>
+                <a href="/Pomoshh-dlja-trejderov-rynka-binarnyh-opcionov" class="left_caption"><span><img src="images/ico_message.png"></span><span class="help_items_title">Бесплатная помощь</span></a>
             </div>
             <div class="clear" style="height:36px;"></div>
             <!-- конец советуем -->
@@ -88,10 +88,7 @@ SnippetWidget::widget([
             <!-- примеры зароботка -->
             <div class="left_caption"><span ><img src="images/ico_example.png"></span><span>Примеры Заработка</span></div>
             <div id="example_items">
-                <a href="#">Памм-счета Alpari – по алгоритму из курса Памм-инвестор</a>
-                <a href="#">Памм-счета Alpari – по алгоритму из курса Памм-инвестор</a> 
-                <a href="#">Памм-счета Alpari – по алгоритму из курса Памм-инвестор</a> 
-                <a href="#">Памм-счета Alpari – по алгоритму из курса Памм-инвестор</a> 
+                <a href="/Rezultaty-torgovli-binarnymi-opcionami-v-2015-godu">Результаты торговли бинарными опционами в 2015 году</a>
             </div>
             <div class="clear" style="height:250px;"></div>
             <!-- конец примеры зароботка -->
