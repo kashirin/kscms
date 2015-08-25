@@ -15,7 +15,7 @@ $this->registerMetaTag([
     'content' => 'Ключевые'
 ]);
 ?>
-<h1 class="caption blue"><span>События для заработка на бинарных опционах</span></h1>
+<h1 class="caption red"><span>События для заработка на бинарных опционах</span></h1>
 
 <div class="padding37">
                 <div class="tabs">
