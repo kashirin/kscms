@@ -28,9 +28,9 @@ $this->registerMetaTag([
                         <?=EventsWidget::widget(['mode'=>'all'])?>               
                         <div class="clear" style="height:18px;"></div>
                         <!-- buttons -->
-                        <a href="/zarabotok-na-sobytijakh" class="btn_red">Как заработать на событии</a>
-                        <a href="#" class="btn_red" style="margin-left:20px;">Кнопка 1</a>
-                        <a href="#" class="btn_red" style="margin-left:20px;">Кнопка 2</a>
+                        <a href="/Zarabotok-na-sobytijah" class="btn_red">Как заработать на событии</a>
+                        <a href="https://iqoption.com/ru" class="btn_red" rel="nofollow" target="_blank" style="margin-left:20px;">Открыть счет</a>
+                        
                         <!-- end buttons -->
                     </div>
                     <div class="tab2_body tab_body">
