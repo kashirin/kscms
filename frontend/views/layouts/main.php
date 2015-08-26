@@ -152,10 +152,10 @@ SnippetWidget::widget([
                 </div>
                 <noindex>
                 <div id="social">
-                    <a href="#" rel="nofollow" target="_blank"></a>
-                    <a href="#" rel="nofollow" target="_blank" id="social2"></a>
-                    <a href="#" rel="nofollow" target="_blank" id="social3"></a>
-                    <a href="#" rel="nofollow" target="_blank" id="social4"></a>
+                    <a href="https://www.youtube.com/channel/UCFJWJB2pkMcWNVXXT9rbMSw" rel="nofollow" target="_blank"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100010245996647" rel="nofollow" target="_blank" id="social2"></a>
+                    <a href="https://twitter.com/MyOptionRU" rel="nofollow" target="_blank" id="social3"></a>
+                    <a href="https://vk.com/public100925821" rel="nofollow" target="_blank" id="social4"></a>
                     <!--<a href="#" rel="nofollow" target="_blank" id="social5"></a>
                     <a href="#" rel="nofollow" target="_blank" id="social6"></a>-->
                 </div>
