@@ -35,7 +35,7 @@ class EventRecord extends \yii\db\ActiveRecord
             ['active', 'boolean'],
             [['sort', 'created_at', 'updated_at'], 'integer'],
             [['description','eventdate'], 'string'],
-            [['eventactive', 'name', 'url'], 'string', 'max' => 250],
+            [['eventactive', 'name'], 'string', 'max' => 250],
             [['eventtime'], 'string', 'max' => 5],
             [['eventtime'], 'default', 'value' => '14:00']
         ];
@@ -124,18 +124,13 @@ class EventRecord extends \yii\db\ActiveRecord
                 'type'=>'string',
                 'readonly'=>false
             ],
-            'url'=>[
-                'label'=>'URL',
-                'detail'=>true,
-                'grid'=>true,
-                'type'=>'string'
-            ],
+            
 
             'description'=>[
                 'label'=>'Описание',
                 'detail'=>true,
                 'grid'=>true,
-                'type'=>'text'
+                'type'=>'editor'
             ],
 
         ];
