@@ -19,7 +19,7 @@ class EventSearch extends EventRecord
     {
         return [
             [['id', 'parent_id', 'active', 'sort', 'eventdate', 'created_at', 'updated_at'], 'integer'],
-            [['eventactive', 'name', 'url', 'description'], 'safe'],
+            [['eventactive', 'name', 'description'], 'safe'],
         ];
     }
 
@@ -75,7 +75,6 @@ class EventSearch extends EventRecord
 
         $query->andFilterWhere(['like', 'eventactive', $this->eventactive])
             ->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'url', $this->url])
             ->andFilterWhere(['like', 'description', $this->description]);
 
         return $dataProvider;

@@ -29,7 +29,7 @@ class EventRecord extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['url','name','description'], 'required'],
+            [['name','description'], 'required'],
             ['active', 'in', 'range' => [self::$STATUS_IS_ACTIVE, self::$STATUS_IS_NOT_ACTIVE]],
             ['active', 'default','value'=>self::$STATUS_IS_ACTIVE],
             ['active', 'boolean'],
