@@ -21,7 +21,7 @@ class EventsWidget extends \yii\base\Widget
 
 	    	$this->_items = EventRecord::find()
 	    						->where(['active'=>EventRecord::$STATUS_IS_ACTIVE])
-	    						->andWhere(['>','eventdate', time()])
+	    						->andWhere(['>','eventdate', time()-86400])
 	                            ->orderBy(['eventdate' => SORT_ASC])
 	                            ->limit(self::CNT)
 	                            ->all();
@@ -29,7 +29,7 @@ class EventsWidget extends \yii\base\Widget
         }elseif($this->mode == 'all'){
         	$this->_items = EventRecord::find()
 	    						->where(['active'=>EventRecord::$STATUS_IS_ACTIVE])
-	    						->andWhere(['>','eventdate', time()])
+	    						->andWhere(['>','eventdate', time()-86400])
 	                            ->orderBy(['eventdate' => SORT_ASC])
 	                            ->all();
 	        $this->_view = 'events_all';
