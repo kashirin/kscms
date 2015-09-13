@@ -62,7 +62,7 @@ class SiteController extends Controller
     }
 
     public function actionDashboard($parent_id = 0)
-    {
+    {  
         return $this->render('dashboard', ['menu_items'=>StructureRecord::findAll(['parent_id'=>$parent_id])]);
     }
 

@@ -11,6 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log','GlobalBeforeComponent'],
+
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
@@ -18,12 +19,18 @@ return [
 			'layout'=>'wide',
 			'as backendFIlter' => 'backend\filters\BackendFilter',
         ],
+
         'ksconfig' => [
             'class' => 'kasser\ksconfig\Module',
-            //'as backendFIlter' => 'backend\filters\BackendFilter',
+            'as backendFIlter' => 'backend\filters\BackendFilter',
         ],
+        
     ],
+
     'components' => [
+
+        
+
         'GlobalBeforeComponent'=>[
             'class'=>'backend\utilities\GlobalBeforeComponent'
         ],
