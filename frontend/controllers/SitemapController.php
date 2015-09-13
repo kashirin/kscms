@@ -38,6 +38,19 @@ class SitemapController extends BaseFrontendController
     	
         return $this->render('sitemap', ['articles'=>$sm->getArticles(), 'pages'=>$sm->getPages()]);
     }
+	
+	public function actionXml()
+    {
+		Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
+		
+		$headers = Yii::$app->response->headers;
+		
+		$headers->add('Content-Type', 'text/xml');
+		
+		$sm = new SitemapComponent();
+    	
+        return $this->renderPartial('xml', ['articles'=>$sm->getArticles(), 'pages'=>$sm->getPages()]);
+    }
 
 
 
